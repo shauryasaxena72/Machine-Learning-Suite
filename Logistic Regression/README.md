@@ -1,4 +1,4 @@
-# Mini Project – Logistic Regression on Diabetes Dataset
+# Logistic Regression on 2020-2025 Dataset
 ## This Contains:
 ### 1. logistic_regression.py
 ### 2. README File
