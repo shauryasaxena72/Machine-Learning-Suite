@@ -1,136 +1,51 @@
-📌 Overview
+# 📊 Exploratory Data Analysis — 2020–2025 Dataset
 
-This project performs an Exploratory Data Analysis (EDA) on a dataset containing country-level numerical data from 2020 to 2025.
+## 📌 Overview
 
-The analysis focuses on understanding the structure and quality of the dataset, identifying duplicates, missing values, and outliers, exploring distributions and relationships between variables, analyzing correlations, and preparing the numerical data through standardization.
+This project performs **Exploratory Data Analysis (EDA)** on a dataset containing country-level numerical data from **2020 to 2025**.
 
-🎯 Objectives
-Understand the structure and characteristics of the dataset
-Inspect the first few records and dataset dimensions
-Identify and remove duplicate records
-Detect potential outliers using the IQR method
-Identify and handle missing values
-Perform univariate analysis
-Analyze relationships between 2020 and 2025 values
-Examine correlations between numerical variables
-Standardize numerical features for further analysis or modeling
-🛠️ Technologies & Libraries
-Python
-Pandas — data loading and manipulation
-NumPy — numerical operations
-Matplotlib — data visualization
-Seaborn — statistical visualizations
-Scikit-learn — feature standardization
-🔍 Analysis Performed
-1. Dataset Inspection
+The analysis focuses on understanding the dataset structure, handling data-quality issues, identifying outliers and missing values, exploring distributions and relationships, analyzing correlations, and standardizing numerical features.
 
-The dataset is loaded using Pandas and initially examined using:
+## 🎯 Objectives
 
-head()
-shape
-info()
-describe()
+- Understand the structure and characteristics of the dataset
+- Inspect dataset dimensions, data types, and statistics
+- Identify and remove duplicate records
+- Detect potential outliers using the IQR method
+- Identify and handle missing values
+- Perform univariate and bivariate analysis
+- Analyze correlations between numerical variables
+- Standardize numerical features
 
-This provides an overview of the dataset's records, columns, data types, and descriptive statistics.
+## 🛠️ Technologies Used
 
-2. Duplicate Detection & Removal
+| Technology | Purpose |
+|---|---|
+| **Python** | Core programming language |
+| **Pandas** | Data manipulation and analysis |
+| **NumPy** | Numerical operations |
+| **Matplotlib** | Data visualization |
+| **Seaborn** | Statistical visualization |
+| **Scikit-learn** | Feature standardization |
 
-Duplicate rows are identified using duplicated().
+## 🔍 EDA Workflow
 
-Detected duplicate records are subsequently removed using:
+### 1. Dataset Loading & Inspection
 
+The dataset is loaded using Pandas and examined using:
+
+- `head()`
+- `shape`
+- `info()`
+- `describe()`
+
+This provides an initial understanding of the dataset's structure, dimensions, data types, and statistical properties.
+
+### 2. Duplicate Detection
+
+Duplicate rows are identified using `duplicated()`.
+
+Detected duplicates are removed using:
+
+```python
 df = df.drop_duplicates()
-3. Outlier Detection
-
-Box plots are used to visually inspect the 2020 and 2025 variables.
-
-Outliers across the numerical columns are then identified using the Interquartile Range (IQR) method:
-
-IQR = Q3 - Q1
-
-
-Lower Bound = Q1 - 1.5 × IQR
-Upper Bound = Q3 + 1.5 × IQR
-
-The number of detected outliers is reported for each numerical column.
-
-4. Missing Value Analysis
-
-Missing values are identified using:
-
-df.isnull().sum()
-
-Missing numerical values are replaced with the median of their respective columns.
-
-5. Univariate Analysis
-
-A histogram is generated for the 2025 variable to examine its distribution.
-
-6. Bivariate Analysis
-
-A scatter plot is used to analyze the relationship between the 2020 and 2025 variables.
-
-7. Correlation Analysis
-
-A numerical correlation matrix is calculated to examine relationships between the dataset's numerical variables.
-
-A heatmap is also generated to visualize these correlations.
-
-8. Feature Standardization
-
-Numerical columns are standardized using StandardScaler from Scikit-learn.
-
-The transformation converts the numerical variables to a standardized scale, making them suitable for subsequent statistical analysis or machine-learning workflows.
-
-📊 Visualizations
-
-The project currently includes:
-
-Box plot — 2020
-Box plot — 2025
-Histogram — 2025 distribution
-Scatter plot — 2020 vs 2025
-Correlation heatmap
-📁 Dataset
-
-Dataset: 2020-2025.csv
-
-The first column is treated as the Country identifier, while the remaining columns are treated as numerical variables.
-
-🚀 Future Improvements
-
-Potential extensions to this EDA include:
-
-Country-wise comparative visualizations
-Year-over-year growth analysis
-Pair plots for numerical variables
-More detailed outlier investigation
-Distribution analysis for every year
-Trend analysis across 2020–2025
-Interactive visualizations
-Additional statistical tests
-Feature engineering for downstream machine-learning models
-📌 Current Workflow
-Load Dataset
-     ↓
-Initial Data Inspection
-     ↓
-Duplicate Detection & Removal
-     ↓
-Outlier Detection
-     ↓
-Missing Value Detection & Imputation
-     ↓
-Univariate Analysis
-     ↓
-Bivariate Analysis
-     ↓
-Correlation Analysis
-     ↓
-Feature Standardization
-👤 Author
-
-Shaurya Saxena
-
-Computer Science Engineering — AI & ML
-Chandigarh University
