@@ -1,4 +1,4 @@
-# Mini Project – Simple Linear Regression (SLR) on 2020–2025 Dataset  
+# Simple Linear Regression (SLR) on 2020–2025 Dataset  
 
 ## Import Libraries 
 ```python
